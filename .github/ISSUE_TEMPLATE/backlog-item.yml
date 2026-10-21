@@ -1,0 +1,72 @@
+name: 🧭 Item de Backlog Canônico
+description: Registrar nova ação técnica, arquitetural ou operacional no ecossistema Yresá.
+title: "[TAG-00] Título Claro e Cirúrgico da Ação"
+labels: ["backlog"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Padrão Ouro de Engenharia Yresá
+        Preencha os campos abaixo para registrar e alimentar o Kanban executivo da organização.
+  - type: dropdown
+    id: status
+    attributes:
+      label: Status Inicial
+      options:
+        - Backlog
+        - In Progress
+        - In Review
+        - Released
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Prioridade
+      options:
+        - Alta (Crítica / Bloqueante)
+        - Média-Alta (Evolução Central)
+        - Média (Oportuna / Conforto)
+        - Baixa (Estética Fina / Débito Menor)
+    validations:
+      required: true
+  - type: input
+    id: epic
+    attributes:
+      label: Iniciativa / Épico Transversal
+      placeholder: "Ex: Cockpit Telegram, Lançamento Alpha, Hidrômetro Numérico..."
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: 1. Contexto & Por Que Fazer?
+      description: Fundamentação ontológica, proteção financeira ou dívida técnica evitada.
+    validations:
+      required: true
+  - type: textarea
+    id: when
+    attributes:
+      label: 2. Quando Fazer? (Gatilhos de Ativação)
+      description: Critério ou gatilho operacional que dispara a execução.
+    validations:
+      required: true
+  - type: textarea
+    id: how
+    attributes:
+      label: 3. Como Fazer? (Estratégia Técnica Cirúrgica)
+      description: Arquivos tocados, bibliotecas e passos da intervenção.
+    validations:
+      required: true
+  - type: textarea
+    id: risks
+    attributes:
+      label: 4. Riscos Mitigados
+      description: O que evitamos que quebre ou custe caro.
+  - type: textarea
+    id: dod
+    attributes:
+      label: 5. Critério de Conclusão (Definition of Done)
+      description: Como sabemos que está pronto, aprovado e testado.
+    validations:
+      required: true
